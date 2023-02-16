@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.Reporter;
 
 public class BrowserFactory {
 	
@@ -36,6 +37,7 @@ public class BrowserFactory {
 		}
 		
 		else {
+			Reporter.log("The given brower "+ browserName + "is not valid , so launch with Chrome browser");
 			driver = new ChromeDriver();
 		}
 		
